@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Iglesia De Cristo La Rosa De Sarón - Un lugar para conocer a Cristo, crecer en la fe y caminar juntos.">
+
+  <title>Iglesia De Cristo La Rosa De Sarón</title>
+
+  <style>
+    :root {
+      --rose: #a91d50;
+      --rose-dark: #721337;
+      --cream: #fff8f2;
+      --gold: #c99a45;
+      --text: #30282a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.94);
+      border-bottom: 1px solid #eadbd4;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--rose-dark);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.05rem;
+    }
+
+    .links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: .95rem;
+    }
+
+    .links a:hover {
+      color: var(--rose);
+    }
+
+    header {
+      min-height: 92vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 120px 22px 80px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(201,154,69,.18), transparent 30%),
+        radial-gradient(circle at 80% 30%, rgba(169,29,80,.13), transparent 32%),
+        linear-gradient(135deg,#fffaf6,#f8e9e5);
+    }
+
+    .hero {
+      max-width: 900px;
+    }
+
+    .rose {
+      font-size: 4.5rem;
+      margin-bottom: 8px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: .85rem;
+      font-weight: bold;
+    }
+
+    h1 {
+      margin: 10px 0 18px;
+      color: var(--rose-dark);
+      font-size: clamp(2.5rem,7vw,5.4rem);
+      line-height: 1.05;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      font-size: 1.15rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--rose);
+      color: white;
+      padding: 13px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+      box-shadow: 0 8px 20px rgba(114,19,55,.15);
+    }
+
+    .btn.alt {
+      background: transparent;
+      color: var(--rose-dark);
+      border: 1px solid var(--rose);
+    }
+
+    section {
+      padding: 78px 22px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .title h2 {
+      color: var(--rose-dark);
+      font-size: 2.3rem;
+      margin-bottom: 8px;
+    }
+
+    .title p {
+      max-width: 680px;
+      margin: auto;
+    }
+
+    .verse {
+      background: var(--rose-dark);
+      color: white;
+      text-align: center;
+      padding: 55px 25px;
+    }
+
+    .verse blockquote {
+      max-width: 760px;
+      margin: auto;
+      font-size: clamp(1.35rem,3vw,2rem);
+      font-style: italic;
+    }
+
+    .verse cite {
+      display: block;
+      margin-top: 18px;
+      color: #f5dba8;
+      font-style: normal;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #ecdeda;
+      box-shadow: 0 10px 25px rgba(70,35,35,.06);
+    }
+
+    .card h3 {
+      color: var(--rose);
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      background: #fff;
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      padding: 35px;
+      border-radius: 22px;
+      background: linear-gradient(135deg,#fff8f2,#f7e6e9);
+    }
+
+    footer {
+      background: #24191c;
+      color: #eadfe1;
+      text-align: center;
+      padding: 35px 22px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media(max-width:760px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .links {
+        gap: 12px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: 88vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENÚ -->
+  <nav>
+    <div class="nav-inner">
+
+      <a class="brand" href="#inicio">
+        🌹 La Rosa De Sarón
+      </a>
+
+      <div class="links">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#mensaje">Mensaje</a>
+        <a href="#ministerios">Ministerios</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- PORTADA -->
+  <header id="inicio">
+
+    <div class="hero">
+
+      <div class="rose">🌹</div>
+
+      <div class="eyebrow">
+        Iglesia De Cristo
+      </div>
+
+      <h1>
+        La Rosa De Sarón
+      </h1>
+
+      <p>
+        Un lugar para conocer a Cristo, crecer en la fe,
+        servir con amor y caminar juntos como familia.
+      </p>
+
+      <a class="btn" href="#nosotros">
+        Conócenos
+      </a>
+
+      <a class="btn alt" href="#contacto">
+        Visítanos
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- VERSÍCULO -->
+  <section class="verse" id="mensaje">
+
+    <blockquote>
+      “Yo soy la rosa de Sarón, y el lirio de los valles.”
+    </blockquote>
+
+    <cite>
+      Cantares 2:1
+    </cite>
+
+  </section>
+
+
+  <!-- NOSOTROS -->
+  <section id="nosotros">
+
+    <div class="container">
+
+      <div class="title">
+
+        <h2>
+          Bienvenidos
+        </h2>
+
+        <p>
+          Queremos ser una iglesia centrada en Cristo,
+          en la Palabra de Dios y en el amor hacia nuestro prójimo.
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+        <article class="card">
+
+          <h3>
+            ✝️ Cristo
+          </h3>
+
+          <p>
+            Celebramos a Jesucristo y anunciamos su mensaje
+            de salvación, esperanza y vida eterna.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>
+            📖 La Palabra
+          </h3>
+
+          <p>
+            Buscamos conocer y vivir las enseñanzas de las Escrituras
+            con fe, obediencia y amor.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>
+            ❤️ Comunidad
+          </h3>
+
+          <p>
+            Somos una familia espiritual que busca acompañar,
+            servir, orar y crecer juntos.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MINISTERIOS -->
+  <section id="ministerios">
+
+    <div class="container">
+
+      <div class="title">
+
+        <h2>
+          Nuestros Ministerios
+        </h2>
+
+        <p>
+          Espacios para aprender, servir y fortalecer
+          nuestra relación con Dios.
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+        <article class="card">
+
+          <h3>
+            👨‍👩‍👧‍👦 Familias
+          </h3>
+
+          <p>
+            Actividades y acompañamiento para fortalecer
+            los hogares en Cristo.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>
+            🧑‍🎓 Jóvenes
+          </h3>
+
+          <p>
+            Un espacio para crecer en la fe, compartir
+            y descubrir el propósito de Dios.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <h3>
+            🙏 Oración
+          </h3>
+
+          <p>
+            Nos reunimos para buscar a Dios, presentar
+            nuestras necesidades y dar gracias.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>
+          Queremos conocerte
+        </h2>
+
+        <p style="margin:12px 0 22px;">
+          Agrega aquí la dirección, horarios de cultos,
+          teléfono y redes sociales de la iglesia.
+        </p>
+
+        <a class="btn" href="mailto:contacto@tudominio.com">
+          Escríbenos
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+
+    <p>
+      <strong>
+        Iglesia De Cristo La Rosa De Sarón
+      </strong>
+    </p>
+
+    <p>
+      “Una iglesia para tu vida”
+    </p>
+
+    <p style="margin-top:10px;font-size:.85rem;">
+      © 2026 · Todos los derechos reservados
+    </p>
+
+  </footer>
+
+</body>
+</html>
